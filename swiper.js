@@ -19,7 +19,7 @@ function setTimer() {
     return setInterval(() => {                             //每1000ms自行一次触发事件
         n++
         buttons.eq(n % size).trigger('click')
-    }, 2000)
+    }, 1500)
 }
 
 $('.window').on('mouseenter', function () {
