@@ -1,0 +1,37 @@
+.window{
+    border: 5px solid #4d4d4d;
+    width: 200px;
+    height:200px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.images{
+    position: relative;
+}
+.images > img{
+    position: absolute;
+    top:0;
+    transition: all 1s;
+}
+.images > img.stop{
+    transition: none;
+}
+.wrapper{
+    width:200px;
+    margin: 10px auto;
+}
+.red{
+    color:red;
+}
+.images > img.current{
+    transform: translateX(0);
+    z-index:1;
+}
+.images > img.enter{
+    transform: translateX(200px);
+}
+.images > img.leave{
+    transform: translateX(-200px);
+    z-index:1;
+}
+
