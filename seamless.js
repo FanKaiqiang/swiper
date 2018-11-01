@@ -28,6 +28,14 @@ buttons.on('click', (x) => {        //按钮事件
 
 })
 
+document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){
+        window.clearInterval(timeId) 
+    }else{
+        timeId = setTimer()
+    }
+})
+
 function init(index) {        //初始化函数
     $(`.images > img:nth-child(${index + 1})`).removeClass('enter leave').addClass('current').siblings().removeClass('current leave').addClass('enter')
     $(`#buttons > button:nth-child(${index + 1})`).addClass('red').siblings().removeClass('red')
